@@ -6,7 +6,7 @@ const personalMovieDB = {
     actors: {},
     genres: [],
     privat: false,
-    start: () => { // классический вид: start: function() {
+    start: () => {
         personalMovieDB.count = +prompt("Сколько фильмов Вы уже посмотрели?", "");
     
         while (personalMovieDB.count == '' || personalMovieDB.count == null || isNaN(personalMovieDB.count)) {
@@ -53,21 +53,8 @@ const personalMovieDB = {
         }
     },
     writeYourGenres: () => {
-        for (let i = 1; i < 2; i++) {  // for (let i = 1; i <= 3; i++) {
-            // let genre = prompt(`Ваш любимый жанр под номером ${i}`, '');
-
-            // if (genre === null || genre === '') {
-            //     console.log('Ошибка: Вы не написали название жанра');
-            //     i--;
-            // } else if (genre.length > 25) {
-            //     console.log('Вы ввели не корректные данные');
-            //     i--;
-            // } else {
-            //     personalMovieDB.genres[i - 1] = genre;
-            // }
-
-            let genres = prompt(`Введите Ваши любимые жанры через запятую`, '').toLowerCase(); 
-            //имеется ввиду временная переменная для этого метода. Элемент объекта - конечно же, personalMovieDB.genres.
+        for (let i = 1; i < 2; i++) {
+            let genres = prompt(`Введите Ваши любимые жанры через запятую`, '').toLowerCase();
 
             if (genres === null || genres === '') {
                 console.log('Ошибка: Вы не написали ни одного названия жанра');
